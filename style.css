@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+
+    /* Button Linear Gradient Colors */
+    --darker-pink-rgb: 255, 20, 147;
+    --darker-orange-rgb: 255, 140, 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: var(--Dark-Slate-Grey);
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 928px;
+    height: 641px;
+    border-radius: 1.5rem;
+    background-color: var(--White);
+    padding: 0 .5rem;
+}
+
+/* Right Side Styling */
+
+.right-side>.background-image {
+    height: 593px;
+    width: 400px;
+    background-image: url(./assets/images/illustration-sign-up-desktop.svg);
+}
+
+/* Left Side Styling */
+
+.left-side h1 {
+    color: var(--Charcoal-Grey);
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 28px;
+}
+
+.subtitle {
+    margin: 2rem 0;
+}
+
+.bullet-points {
+    margin-bottom: 3rem;
+}
+
+.bullet-points .point {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.bullet-points>.point>img {
+    width: 20px;
+    margin-right: 17px;
+}
+
+form>div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+}
+
+.input-title>label {
+    margin-bottom: 13px;
+}
+
+form>div>input {
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    padding: 1rem .75rem;
+    margin-bottom: 2.5rem;
+}
+
+.input-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-title>p {
+    color: red;
+    font-size: 12px;
+}
+
+form>button {
+    background-color: var(--Dark-Slate-Grey);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 18px 4.5rem;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all .5s;
+}
+
+form>button:hover {
+    background-image: linear-gradient(to right, rgba(var(--darker-pink-rgb), 0.9) 0%, rgba(var(--darker-orange-rgb), 0.9) 100%);
+    box-shadow: 0px 0px 14px var(--tomato);
+}
+
+/* Success Page Styling */
+
+#successPage {
+    background-color: white;
+    border-radius: 21px;
+    padding: 3rem;
+    max-width: 383px;
+}
+
+#successPage>p {
+    line-height: 1.75;
+    font-size: 14px;
+}
+
+#successPage>p>span {
+    color: var(--Dark-Slate-Grey);
+    font-weight: bold;
+}
+
+#successPage>h1 {
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+#successPage>button {
+    border: none;
+    border-radius: 14px;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    background-color: var(--Dark-Slate-Grey);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 1rem;
+}
+
+#successPage>button:hover {
+    background-image: linear-gradient(to right, rgba(var(--darker-pink-rgb), 0.9) 0%, rgba(var(--darker-orange-rgb), 0.9) 100%);
+    box-shadow: 0px 0px 14px var(--tomato);
+
+}
+
+footer {
+    position: absolute;
+    bottom: 14px;
+    color: white;
+}
+
+footer>a {
+    color: var(--tomato);
+}
+
+/* JavaScript Styling */
+.hide {
+    display: none;
+}
+
+.error {
+    border-color: red;
+    background-color: lightpink;
+    color: red;
+}
+
+/* Media Queries - Mobile */
+@media screen and (max-width: 425px) {
+    body {
+        justify-content: start;
+        background-color: transparent;
+    }
+
+    main {
+        flex-direction: column-reverse;
+        justify-content: start;
+        width: 100%;
+        height: auto;
+    }
+
+    .right-side>.background-image {
+        height: 250px;
+        width: 100vw;
+        background-image: url(./assets/images/illustration-sign-up-mobile.svg);
+        border-bottom-right-radius: 14px;
+        border-bottom-left-radius: 14px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .left-side {
+        padding: 1rem;
+    }
+
+    .bullet-points {
+        margin: none;
+    }
+
+    .left-side h1 {
+        margin: 1.25rem 0;
+        font-size: 35px;
+    }
+
+    form>button {
+        font-size: .74rem;
+    }
+
+    form>div {
+        margin-top: 1.5rem;
+    }
+
+    .input-title>label {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    footer {
+        font-size: 12px;
+        color: black;
+    }
+
+    #successPage {
+        margin: 50% 0;
+    }
+}
